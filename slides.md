@@ -1,99 +1,91 @@
+---
 marp: true
-theme: my-custom-theme
+theme: default
 paginate: true
-header: 'Product Documentation'
+paginate-format: 'Page %n of %t'
+style: |
+  section {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2em;
+  }
+  h1, h2 {
+    color: #0078d7;
+  }
+  code {
+    background: #f5f5f5;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  footer {
+    color: #888;
+    font-size: 0.8em;
+    text-align: right;
+  }
+---
 
-<!-- Your email here -->
+<!-- _class: lead -->
 
-22f2000895@ds.study.iitm.ac.in
+# 📘 Product Documentation with Marp  
+### For Software Engineering Teams  
+📧 **22f2000895@ds.study.iitm.ac.in**
 
-Product Documentation
-A guide to get started with the new platform
-<!--
-_class:
+<footer>Welcome to our documentation approach</footer>
 
-lead
-_header: false
--->
+---
 
-<!-- Custom theme styling -->
+# 🎯 Goals
 
-<style scoped>
-section {
-background-color: #2c3e50;
-color: #ecf0f1;
-font-family: 'Inter', sans-serif;
-}
-h1 {
-color: #3498db;
-text-align: center;
-}
-p {
-font-size: 1.2em;
-}
-</style>
+- Maintainable in Git
+- Easy format conversion (PDF, PPTX, HTML)
+- Dev-friendly + user-centric
+- Works well with CI/CD pipelines
 
-Introduction
-Welcome to the official product documentation. This presentation covers the core features, installation process, and essential usage instructions for our new software product. Our goal is to provide a clear and concise guide for all users.
+---
 
-<!-- _backgroundColor: #34495e -->
+<!-- _backgroundImage: url('./assets/background.jpg') -->
+<!-- _color: white -->
 
-Core Features
-User-Friendly Interface: An intuitive design for a seamless experience.
+# 🚀 Why Good Documentation Matters
 
-Robust API: Easily integrate with other services.
+- Reduces support requests  
+- Speeds up onboarding  
+- Improves user satisfaction  
+- Supports scalability
 
-Scalable Architecture: Built to grow with your needs.
+---
 
-Advanced Security: Protecting your data is our top priority.
+# 🔧 Tooling Stack
 
-<!--
-_header: Installation Guide
-_backgroundImage: url('https://placehold.co/1920x1080/2980b9/ecf0f1?text=Your+Product+Image+Here')
-_backgroundSize: cover
-_backgroundPosition: center
--->
+- **Marp CLI** for format conversion
+- **Markdown** for simplicity
+- **KaTeX** or **MathJax** for equations
+- **Git + GitHub** for version control
 
-Installation
-This section provides a step-by-step guide to installing the software.
+---
 
-1. Download the latest release from our official website.
+# 🔢 Algorithmic Complexity Example
 
-2. Follow the on-screen instructions to complete the setup.
+Consider **binary search**:
 
-3. Launch the application and log in with your credentials.
+$$
+T(n) = T\left(\frac{n}{2}\right) + O(1) \Rightarrow T(n) \in O(\log n)
+$$
 
-<style scoped>
-p {
-font-size: 1.5em;
-color: #f1c40f;
-}
-</style>
+Used in search optimizations throughout the system.
 
-Algorithmic Complexity
-We use a highly efficient algorithm for our search functionality. The time complexity for searching a dataset of size n is approximately O(
-logn).
+---
 
-For complex queries, the worst-case time complexity is given by:
+# 💻 Sample Code Snippet
 
-
-T(n)=O(n 
-2
- logn)
-<style scoped>
-section {
-background-color: #ecf0f1;
-color: #2c3e50;
-}
-h1 {
-color: #2c3e50;
-text-align: center;
-}
-</style>
-
-Final Thoughts
-Thank you for your attention. We are committed to providing the best possible experience.
-
-For support, feedback, or further questions, please contact us.
-
-<p style="font-size: 1.2em;">&nbsp;</p>
+```python
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
